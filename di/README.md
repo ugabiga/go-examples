@@ -12,3 +12,9 @@ except for `dig.In` However, my biggest complaint is the ambiguity of the errors
 ## 3. Fx
 I prefer `fx` over `dig`. `fx` reduces the amount of repetitive code I had to write in `dig`.
 Also debugging is much easier in `fx` than in `dig`.
+
+## 4. Wire
+I don’t like that `wire` uses code generation.
+And I don't like the fact that if I want to initialize an object, 
+I have to list all its dependencies in the `wire.Build` function.
+Unless I specifically need compile-time dependency injection, I would not use it personally.
