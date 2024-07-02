@@ -26,6 +26,14 @@ type HandlerV1Deps struct {
 	AuthSrv *AuthenticationService
 }
 
+// NewHandlerV1Deps for wire
+func NewHandlerV1Deps(userSrv *UserService, authSrv *AuthenticationService) HandlerV1Deps {
+	return HandlerV1Deps{
+		UserSrv: userSrv,
+		AuthSrv: authSrv,
+	}
+}
+
 type HandlerV1 struct {
 	userSrv *UserService
 	authSrv *AuthenticationService

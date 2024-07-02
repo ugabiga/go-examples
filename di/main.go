@@ -11,6 +11,7 @@ const (
 	CmdGoioc = "goioc"
 	CmdDig   = "dig"
 	CmdFx    = "fx"
+	CmdWire  = "wire"
 )
 
 func main() {
@@ -32,6 +33,8 @@ func main() {
 			internal.RunDig()
 		case CmdFx:
 			internal.RunFx()
+		case CmdWire:
+			internal.RunWire()
 		default:
 			fmt.Printf("Unknown option: %s\n", arg)
 		}
