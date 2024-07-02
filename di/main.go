@@ -7,9 +7,10 @@ import (
 	"github.com/ugabiga/go-examples/di/internal"
 )
 
-var (
+const (
 	CMD_GOIOC = "goioc"
 	CMD_DIG   = "dig"
+	CMD_FX    = "fx"
 )
 
 func main() {
@@ -26,6 +27,8 @@ func main() {
 			internal.RunGoIoC()
 		case CMD_DIG:
 			internal.RunDig()
+		case CMD_FX:
+			internal.RunFx()
 		default:
 			fmt.Printf("Unknown option: %s\n", arg)
 		}
