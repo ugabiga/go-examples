@@ -16,7 +16,10 @@ const (
 func main() {
 	if len(os.Args) == 1 {
 		fmt.Printf("Options:\n"+
-			"\t%s - run GoIoC example\n", CmdGoioc,
+			"\t%s - run GoIoC example\n"+
+			"\t%s - run Dig example\n"+
+			"\t%s - run Fx example\n",
+			CmdGoioc, CmdDig, CmdFx,
 		)
 		return
 	}
