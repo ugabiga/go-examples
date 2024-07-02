@@ -8,26 +8,26 @@ import (
 )
 
 const (
-	CMD_GOIOC = "goioc"
-	CMD_DIG   = "dig"
-	CMD_FX    = "fx"
+	CmdGoioc = "goioc"
+	CmdDig   = "dig"
+	CmdFx    = "fx"
 )
 
 func main() {
 	if len(os.Args) == 1 {
 		fmt.Printf("Options:\n"+
-			"\t%s - run GoIoC example\n", CMD_GOIOC,
+			"\t%s - run GoIoC example\n", CmdGoioc,
 		)
 		return
 	}
 
 	for _, arg := range os.Args[1:] {
 		switch arg {
-		case CMD_GOIOC:
+		case CmdGoioc:
 			internal.RunGoIoC()
-		case CMD_DIG:
+		case CmdDig:
 			internal.RunDig()
-		case CMD_FX:
+		case CmdFx:
 			internal.RunFx()
 		default:
 			fmt.Printf("Unknown option: %s\n", arg)
