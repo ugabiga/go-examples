@@ -5,6 +5,8 @@ go 1.22.2
 require (
 	github.com/goioc/di v1.7.1
 	github.com/google/wire v0.6.0
+	github.com/samber/slog-formatter v1.0.1
+	github.com/spf13/viper v1.19.0
 	go.uber.org/dig v1.17.1
 	go.uber.org/fx v1.22.1
 	gopkg.in/yaml.v3 v3.0.1
@@ -18,12 +20,13 @@ require (
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
 	github.com/sagikazarmark/locafero v0.4.0 // indirect
 	github.com/sagikazarmark/slog-shim v0.1.0 // indirect
+	github.com/samber/lo v1.38.1 // indirect
+	github.com/samber/slog-multi v1.1.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/sourcegraph/conc v0.3.0 // indirect
 	github.com/spf13/afero v1.11.0 // indirect
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/spf13/viper v1.19.0 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
 	go.uber.org/zap v1.26.0 // indirect
