@@ -17,7 +17,7 @@ const (
 )
 
 func RunSlog() {
-	logger := NewLogger()
+	logger := newSlogLogger()
 	logger.Debug("Debug message",
 		slog.String("string", "value"),
 		slog.Int("int", 1),
@@ -29,9 +29,9 @@ func RunSlog() {
 
 }
 
-func NewLogger() *slog.Logger {
+func newSlogLogger() *slog.Logger {
 	logOptions := slog.HandlerOptions{
-		AddSource:   false,
+		AddSource:   true,
 		Level:       slog.LevelDebug,
 		ReplaceAttr: nil,
 	}
@@ -60,8 +60,8 @@ func errorFormatter(fieldName string) slogformatter.Formatter {
 }
 
 type stackTraceInfo struct {
-	Func string
-	File string
+	Function string `json:"function"`
+	File     string `json:"file"`
 }
 
 var reStackTrace = regexp.MustCompile(`log/slog.*\n`)
@@ -93,8 +93,8 @@ func stackTrace() []stackTraceInfo {
 		t := strings.Split(line, seperatorToken)
 		if len(t) > 1 {
 			st = append(st, stackTraceInfo{
-				Func: t[0],
-				File: t[1],
+				Function: t[0],
+				File:     t[1],
 			})
 		}
 	}
