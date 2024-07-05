@@ -9,6 +9,7 @@ import (
 
 const (
 	CmdSlog = "slog"
+	CmdZap  = "zap"
 )
 
 func main() {
@@ -25,6 +26,8 @@ func main() {
 		switch arg {
 		case CmdSlog:
 			internal.RunSlog()
+		case CmdZap:
+			internal.RunZap()
 		default:
 			fmt.Printf("Unknown option: %s\n", arg)
 		}
